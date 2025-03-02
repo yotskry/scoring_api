@@ -1,0 +1,36 @@
+[project]
+name = "scoring-api"
+version = "1.0.0"
+description = "Scoring API task"
+authors = [
+    {name = "Dmitriy Vdovichenko",email = "yotskry@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+isort = "^6.0.1"
+mypy = "^1.15.0"
+flake8 = "^7.1.2"
+flake8-pyproject = "^1.2.3"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 120
+exclude = [
+    ".venv",
+    "__pycache__"
+]
